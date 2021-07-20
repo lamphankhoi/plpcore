@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include plpcore *.css
+recursive-include plpcore *.csv
+recursive-include plpcore *.html
+recursive-include plpcore *.ico
+recursive-include plpcore *.js
+recursive-include plpcore *.json
+recursive-include plpcore *.md
+recursive-include plpcore *.png
+recursive-include plpcore *.py
+recursive-include plpcore *.svg
+recursive-include plpcore *.txt
+recursive-exclude plpcore *.pyc
