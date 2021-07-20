@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-03-07 03:48:42.507012",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "naming_series",
+  "posting_date",
+  "posting_time",
+  "column_break_5",
+  "status",
+  "prepared_by",
+  "manufacturing_plan_material_details_section",
+  "manufacturing_plan_material_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "SXNL-.DD.-.MM.-.YY.-.##",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Posting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "In Process\nCompleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manufacturing_plan_material_details_section",
+   "fieldtype": "Section Break",
+   "label": "Manufacturing Plan Material Details"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "manufacturing_plan_material_details",
+   "fieldtype": "Table",
+   "label": "Manufacturing Plan Material Details",
+   "options": "Manufacturing Plan Material Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Prepared By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-03-12 02:36:19.303359",
+ "modified_by": "Administrator",
+ "module": "PLPCORE",
+ "name": "Manufacturing Plan Materials",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

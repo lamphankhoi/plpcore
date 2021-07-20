@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2021-03-07 02:37:30.839519",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "delivery_note_number",
+  "delivery_time",
+  "vehicle",
+  "driver_name",
+  "assistant_1",
+  "assistant_2",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "delivery_note_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Delivery Note Number",
+   "options": "Delivery Note",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "delivery_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Delivery Time",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "vehicle",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "driver_name",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Driver Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "assistant_1",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Assistant 1",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "assistant_2",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Assistant 2"
+  },
+  {
+   "columns": 1,
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-03-07 07:36:31.492234",
+ "modified_by": "Administrator",
+ "module": "PLPCORE",
+ "name": "Dispatch Plan Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

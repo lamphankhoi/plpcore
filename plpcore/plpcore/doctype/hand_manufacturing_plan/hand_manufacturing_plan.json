@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-03-07 04:44:57.723745",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "naming_series",
+  "posting_date",
+  "posting_time",
+  "column_break_5",
+  "prepared_by",
+  "section_break_7",
+  "sales_order_number",
+  "po_no",
+  "column_break_9",
+  "delivery_date",
+  "transaction_date",
+  "column_break_11",
+  "status",
+  "per_delivered",
+  "customer_section",
+  "customer",
+  "hand_manufacturing_plan_required_details_section",
+  "column_break_18",
+  "hand_manufacturing_plan_required_details",
+  "hand_manufacturing_plan_details_section",
+  "hand_manufacturing_plan_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "SXGC-.DD.-.MM.-.YY.-.##",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nOn Hold\nTo Deliver and Bill\nTo Bill",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Sales Order"
+  },
+  {
+   "fieldname": "sales_order_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Order Number",
+   "options": "Sales Order",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "hand_manufacturing_plan_required_details_section",
+   "fieldtype": "Section Break",
+   "label": "Required Details"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "hand_manufacturing_plan_required_details",
+   "fieldtype": "Table",
+   "label": "Hand Manufacturing Plan Required Details",
+   "options": "Hand Manufacturing Plan Required Details",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "hand_manufacturing_plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "hand_manufacturing_plan_details",
+   "fieldtype": "Table",
+   "label": "Hand Manufacturing Plan Details",
+   "options": "Hand Manufacturing Plan Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO Number",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "per_delivered",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "%  Delivered",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Receiving Order Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sales_order_number != null",
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Prepared By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-03-12 02:30:44.635895",
+ "modified_by": "Administrator",
+ "module": "PLPCORE",
+ "name": "Hand Manufacturing Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

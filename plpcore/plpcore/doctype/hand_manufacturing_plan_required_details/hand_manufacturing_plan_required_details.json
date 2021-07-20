@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "creation": "2021-03-07 04:39:01.548885",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "item_code",
+  "item_bom",
+  "qty_needed",
+  "base_rate"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "qty_needed",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty Needed"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "item_bom.total_cost",
+   "fieldname": "base_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Base Rate",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_bom",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Item BOM",
+   "options": "BOM",
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-03-10 08:07:05.340010",
+ "modified_by": "Administrator",
+ "module": "PLPCORE",
+ "name": "Hand Manufacturing Plan Required Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
