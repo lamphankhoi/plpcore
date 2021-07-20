@@ -173,3 +173,4 @@ user_data_fields = [
 # 	"plpcore.auth.validate"
 # ]
 
+fixtures = ["Report", "Role Profile", "Role", "Custom DocPerm", "Custom Field", "Client Script", "Property Setter", "Print Format", "Workflow", "Workflow State", "Workflow Action", "Workspace"]
